@@ -2,6 +2,7 @@
 <html>
 
 <head>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Flexbox Pricing Table</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -18,7 +19,7 @@
       height: 100vh;
       gap: 20px;
       justify-content: space-evenly;
-      flex-basis: 100px;
+      flex-basis: 300px;
 
     }
 
@@ -29,8 +30,7 @@
       align-items: center;
       border-radius: 5%;
       padding: 1em;
-      width: 300px;
-      height: 195px;
+      flex-basis: 300px;
     }
     .plan-title, .plan-price{
       font-weight: bolder;
@@ -47,9 +47,13 @@
     }
 
     /* Hint: What can you do with a media query and flexbox? */
-    @media (max-width: 800px) {
+    @media (max-width: 1060px) {
       .pricing-container{
         flex-direction: column;
+      }
+      .pricing-plan{
+        flex-basis: content;
+        width: 300px;
       }
     }
   </style>
